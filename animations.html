@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML & CSS Demo</title>
+    <style>
+      /* Flexbox */
+      .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 200px;
+        background-color: #f4f4f4;
+      }
+
+      .item {
+        background-color: #ddd;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      /* Animations */
+      .square {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .animateHorizontal {
+        background-color: blue;
+        animation: moveHorizontal 2s infinite alternate;
+      }
+
+      .animateVertical {
+        background-color: red;
+        animation: moveVertical 2s infinite alternate;
+      }
+
+      .animateFade {
+        background-color: green;
+        animation: fade 2s infinite alternate;
+      }
+
+      @keyframes moveHorizontal {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(100px);
+        }
+      }
+
+      @keyframes moveVertical {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(100px);
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+          transform: rotate(0deg);
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(90deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="forms.html">Forms</a>
+        <a href="animations.html">Animations</a>
+        </ul>
+      </nav>
+      <h1>Animations Demo</h1>
+      <hr />
+    </header>
+
+    <!-- CSS Animations -->
+    <div class="container">
+      <div class="item">
+        <div class="square animateHorizontal"></div>
+      </div>
+      <div class="item">
+        <div class="square animateVertical"></div>
+      </div>
+      <div class="item">
+        <div class="square animateFade"></div>
+      </div>
+    </div>
+  </body>
+</html>
