@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>HTML & CSS Demo</title>
     <style>
       /* Flexbox */
@@ -73,10 +74,25 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="forms.html">Forms</a>
-        <a href="animations.html">Animations</a>
+      <nav class="navbar">
+        <ul class="menu">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#">Forms</a>
+            <ul class="subMenu">
+              <li>
+                <a href="forms.html">Basic Form</a>
+              </li>
+              <li>
+                <a href="forms.html">Styled Form</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="animations.html" class="active">Animations</a>
+          </li>
         </ul>
       </nav>
       <h1>Animations Demo</h1>
