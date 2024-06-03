@@ -1,6 +1,7 @@
 body {
   background-color: #F9F9F9;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Roboto', sans-serif;
+  background-image: "";
 }
 
 header {
@@ -39,6 +40,10 @@ header {
   opacity: .4;
 }
 
+.navbar li a.active {
+  background-color: #4c86af;
+}
+
 .subMenu {
   display: none;
   position: absolute;
@@ -52,13 +57,6 @@ header {
 
 .navbar li:hover .subMenu {
   display: block;
-}
-
-@media screen and (max-width: 600px) {
-  .navbar li {
-    float: none;
-    width: 100%;
-  }
 }
 
 @keyframes menuFadeIn {
@@ -100,4 +98,63 @@ header h1 {
 
 .mainTable tr:hover {
   background-color: #f1f1f1;
+}
+
+.itemListing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 20px;
+  padding-bottom: 20px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+
+.card .description {
+  padding: 15px;
+}
+
+.card .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card .price {
+  background-color: rgba(76, 175, 79, 0.8);
+  color: white;
+  float: right;
+  padding: 5px;
+  border-radius: 10px;
+  /* transform: translate(10px, -210px); */
+}
+
+@media screen and (max-width: 600px) {
+  .navbar li {
+    float: none;
+    width: 100%;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
 }
